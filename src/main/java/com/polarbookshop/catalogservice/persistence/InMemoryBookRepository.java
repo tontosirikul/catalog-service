@@ -9,9 +9,11 @@ import org.springframework.stereotype.Repository;
 import com.polarbookshop.catalogservice.domain.Book;
 import com.polarbookshop.catalogservice.domain.BookRepository;
 
+// Stereotype annotation that marks a class to be a repository managed by Spring
 @Repository
 public class InMemoryBookRepository implements BookRepository {
 
+    // In-memory map to store books for testing purposes
     private static final Map<String, Book> books = new ConcurrentHashMap<>();
 
     @Override
